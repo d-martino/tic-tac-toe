@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "34c7c528-ff35-426a-8a94-dbcdcb96a442",
+		"name": "tic-tac-toe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40358881"
+	},
+	"item": [
+		{
+			"name": "START GAME",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n      {\n         \"name\":\"Dani\",\n         \"marker\":\"X\"\n      },\n      {\n         \"name\":\"Player 2\",\n         \"marker\":\"O\"\n      }\n]\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/tic-tac-toe/api/v1/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"tic-tac-toe",
+						"api",
+						"v1",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PLAY",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"gameId\":\"7e383752-8bc2-47de-be36-9360e320a7f1\",\n   \"rowIndex\":2,\n   \"colIndex\":2,\n   \"player\":{\n      \"name\":\"Daniela\",\n      \"marker\":\"O\"\n   }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/tic-tac-toe/api/v1/play",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"tic-tac-toe",
+						"api",
+						"v1",
+						"play"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET game",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/tic-tac-toe/api/v1/game/7e383752-8bc2-47de-be36-9360e320a7f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"tic-tac-toe",
+						"api",
+						"v1",
+						"game",
+						"7e383752-8bc2-47de-be36-9360e320a7f1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
